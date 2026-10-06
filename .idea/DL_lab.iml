@@ -4,6 +4,10 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/Lab1/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/Lab2/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Lab1_activation_functions/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Lab2_Forwardpass/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Lab3_backpropogation/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/transfer_learning/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (dlvenv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
