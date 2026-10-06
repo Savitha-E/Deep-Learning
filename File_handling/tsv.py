@@ -1,11 +1,12 @@
 import pandas as pd
 
 # ============================================================
-# 1. Load CSV file
+# 1. Load TSV file
 # ============================================================
 
 data = pd.read_csv(
-    "/home/ibab/DL_data/File_handling/csv/pract.csv"
+    "/home/ibab/DL_data/File_handling/tsv/pract.tsv",
+    sep="\t"
 )
 
 print(data)
@@ -36,8 +37,11 @@ print(data["target"])
 
 
 # ============================================================
-# 4. Drop columns we don't want
+# 4. Drop columns
 # ============================================================
+
+# Drop text columns that we are not using as numerical
+# features in this exercise
 
 data_without_text = data.drop(
     columns=["chromosome", "gene"]
@@ -60,7 +64,7 @@ print(data_without_waste.shape)
 
 
 # ============================================================
-# 6. Select features
+# 6. Separate features
 # ============================================================
 
 X_features = data_without_waste[
@@ -74,7 +78,7 @@ print(X_features.head())
 
 
 # ============================================================
-# 7. Select target
+# 7. Separate target
 # ============================================================
 
 y = data_without_waste["target"]
@@ -86,10 +90,11 @@ print(y.head())
 
 
 # ============================================================
-# 8. Convert pandas → NumPy
+# 8. Convert X from pandas DataFrame to NumPy array
 # ============================================================
 
 X_features = X_features.to_numpy()
+
 y = y.to_numpy()
 
 print("X NumPy shape:")
